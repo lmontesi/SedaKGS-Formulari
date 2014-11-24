@@ -1,0 +1,8 @@
+<templates>
+	<template name="default" url="/resources/template/default.jsp" default="true"/>
+	
+	<screen name="home" extends="base">	
+		<parameter key="content" value="/resources/template/default/home/homeContent.jsp"/>
+	</screen>
+	
+</templates>

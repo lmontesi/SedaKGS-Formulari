@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/webflow
+        http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+
+	<!--
+	 id = nome 
+	 view =  
+	 model = 
+	 -->
+	<var name="formElencoComuni" class="com.seda.entrate.anagrafica.formulari.flow.forms.ElencoComuniForm" />
+    <view-state  id="elencoComuni" view="elencoComuni" model="formElencoComuni">
+ 		<on-entry>
+ 			<evaluate expression="formulariAction.init()" result="flowScope.elencoComuni" />
+ 		</on-entry>
+ 		<transition  on="cerca" to="elencoComuni"/>
+ 		<transition  on="nuovo" to="modificaComune"/>
+ 		<transition  on="reset" to="elencoComuni"/>
+ 		<transition  on="download" to="elencoComuni"/>
+ 		<transition  on="details" to="dettaglioComune"/>
+ 		<transition  on="modify" to="modificaComune"/>
+ 		<transition  on="delete" to="modificaComune"/>
+    </view-state>
+
+	<action-state id="elencoComuniAction">
+		
+		<evaluate expression="formulariAction.cercaComune(formElencoComuni,requestParameters.pageNumber,requestParameters.rowsPerPage)" result="flowScope.elencoComuni" />
+		<transition on="succes" to="elencoComuni" />
+		<transition on-exception="com.seda.entrate.anagrafica.formulari.flow.exception.FormulariException" to="elencoComuni"></transition>
+	</action-state>
+	
+	
+    <view-state  id="dettaglioComune" view="dettaglioComune" >
+     	 <transition  on="cerca" to="elencoComuni"/>
+    </view-state>
+
+    <view-state  id="dettaglioDatiStorici" view="dettaglioDatiStorici" >
+      
+    </view-state>
+
+    <view-state  id="modificaComune" view="modificaComune" >
+      
+    </view-state>
+
+    <view-state  id="modificaDatiStorici" view="modificaDatiStorici" >
+      
+    </view-state>
+
+</flow>

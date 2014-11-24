@@ -1,0 +1,15 @@
+<templates>
+	<template name="default" url="/resources/template/default.jsp" default="true"/>
+  
+	<screen name="base">
+		<parameter key="headerLeft" value="/resources/template/default/header_banner.jsp" />
+		<parameter key="headerRight" value="/resources/template/default/header_credentials.jsp"/>	
+		<parameter key="menu" value="/resources/template/default/home/homeMenu.jsp"/>	
+		<parameter key="footer" value="/resources/template/default/footer.jsp"/>
+	</screen>
+
+	<screen name="error" extends="base">	
+		<parameter key="content" value="/views/errors/error.jsp"/>
+	</screen>
+	
+</templates>

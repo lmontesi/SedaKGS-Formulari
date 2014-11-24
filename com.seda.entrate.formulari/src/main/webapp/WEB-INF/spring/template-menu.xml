@@ -1,0 +1,11 @@
+<menus>
+   <menu id='anagraficaHome'>
+      <paths><match pattern='/menuHomeAnagrafica/**'/></paths>
+   </menu>
+   <menu id='anagraficaHome.formulari' order="1" path='/formulari/elencoComuni'>
+      <paths><match pattern='/menuHomeAnagrafica/**'/></paths>
+   </menu>
+   <menu id='anagraficaHome.anagrafica' order="1" path='/anagrafica/menu'>
+      <paths><match pattern='/menuHomeAnagrafica/**'/></paths>
+   </menu>
+</menus>

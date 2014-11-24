@@ -1,0 +1,8 @@
+<templates>
+	<template name="default" url="/resources/template/default.jsp" default="true"/>
+	
+	<screen name="anagrafica" extends="base">	
+		<parameter key="content" value="/resources/template/default/anagrafica/anagraficaContent.jsp"/>
+	</screen>
+
+</templates>

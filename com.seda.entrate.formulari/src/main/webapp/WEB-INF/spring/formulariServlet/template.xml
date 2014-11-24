@@ -1,0 +1,24 @@
+<templates>
+	<template name="default" url="/resources/template/default.jsp" default="true"/>
+	
+	<screen name="elencoComuni" extends="base">	
+		<parameter key="content" value="/resources/template/default/formulari/elencoComuni.jsp"/>
+	</screen>
+
+	<screen name="dettaglioComune" extends="base">	
+		<parameter key="content" value="/resources/template/default/formulari/formulariContent.jsp"/>
+	</screen>
+	
+	<screen name="dettaglioDatiStorici" extends="base">	
+		<parameter key="content" value="/resources/template/default/formulari/formulariContent.jsp"/>
+	</screen>
+
+	<screen name="modificaComune" extends="base">	
+		<parameter key="content" value="/resources/template/default/formulari/formulariContent.jsp"/>
+	</screen>
+
+	<screen name="modificaDatiStorici" extends="base">	
+		<parameter key="content" value="/resources/template/default/formulari/formulariContent.jsp"/>
+	</screen>
+	
+</templates>
